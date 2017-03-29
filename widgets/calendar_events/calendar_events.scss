@@ -1,0 +1,79 @@
+$height: 54pt;
+
+body {
+  background-color: #98D0C3 !important;
+}
+
+.widget.widget-calendar-events {
+  vertical-align: initial;
+}
+
+.main-event {
+  background-color: #5080BB;
+  height: 150px;
+  font-size: $height;
+  line-height: $height;
+
+  & > div {
+    display: inline-block;
+    float: left;
+  }
+}
+
+.main-event__date-time-area {
+  font-size: $height;
+  line-height: $height;
+  width: 220px;
+}
+
+.main-event__summary {
+  overflow: hidden;
+  padding-left: 50px;
+  text-align: left;
+  width: 1200px;
+}
+
+.main-event__countdown {
+  line-height: 2 * $height;
+  text-align: center;
+  width: 390px;
+}
+
+.events__column {
+  display: inline-block;
+  float: left;
+  width: 930px;
+}
+
+.events__month-name {
+  background-color: #98D0C3;
+  color: #4A4A4A;
+  font-size: $height;
+  line-height: $height + 20px;
+  padding: 10px;
+}
+
+.event {
+  color: #4A4A4A;
+  height: 110px;
+}
+
+.event__date-time-area {
+  display: inline-block;
+  float: left;
+  font-size: $height - 20pt;
+  line-height: $height - 20pt;
+  width: 145px;
+}
+
+.event__summary {
+  display: inline-block;
+  float: left;
+  font-size: $height - 20pt;
+  line-height: $height - 20pt;
+  max-height: 2 * ($height - 20pt);
+  max-width: 750px;
+  overflow: hidden;
+  padding-left: 30px;
+  text-align: left;
+}

@@ -1,0 +1,24 @@
+<div class="main-event">
+  <div class="main-event__date-time-area">
+    <div data-bind="event_date"></div>
+    <div data-bind="event_time"></div>
+  </div>
+  <div class="main-event__summary">
+    <div data-bind="main_event.summary"></div>
+  </div>
+  <div class="js-countdown-timer main-event__countdown"></div>
+</div>
+
+<div class="events">
+  <div class="events__column" data-foreach-month="months">
+    <div class="events__month-name" data-bind="month.name"></div>
+
+    <div class="event" data-foreach-event="month.next_events">
+      <div class="event__date-time-area">
+        <div data-bind="event.start_date"></div>
+        <div data-bind="event.start_time"></div>
+      </div>
+      <div class="event__summary" data-bind="event.summary"></div>
+    </div>
+  </div>
+</div>

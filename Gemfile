@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'dashing'
+ruby '2.3.3'
 
-## Remove this if you don't need a twitter widget.
-gem 'twitter', '>= 5.9.0'
+gem 'dashing'
+gem 'dotenv'
+gem 'google-api-client', '>= 0.8'
