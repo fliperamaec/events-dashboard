@@ -13,6 +13,7 @@ SCHEDULER.every '15m', first_in: 4 do |job|
     max_results: 15,
     single_events: true,
     order_by: 'startTime',
+    time_max: (Time.now.to_datetime >> 3).rfc3339,
     time_min: Time.now.to_datetime.rfc3339
   )
 
