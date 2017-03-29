@@ -1,8 +1,5 @@
 class Dashing.CalendarEvents extends Dashing.Widget
 
-  if intervalId?
-    clearInterval(intervalId)
-
   MONTHS = [
     'Janeiro',
     'Fevereiro',
@@ -19,6 +16,9 @@ class Dashing.CalendarEvents extends Dashing.Widget
   ]
 
   onData: (data) =>
+    if intervalId?
+      clearInterval(intervalId)
+
     event = rest = null
     getEvents = (first, others...) ->
       event = first
