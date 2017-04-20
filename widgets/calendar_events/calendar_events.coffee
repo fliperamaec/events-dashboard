@@ -45,8 +45,9 @@ class Dashing.CalendarEvents extends Dashing.Widget
         currentMonth = { id: newEventMonth, name: MONTHS[newEventMonth], next_events: [] }
         months.push(currentMonth)
 
-      eventAttrs = { summary: nextEvent.summary, start_date: newEventStartDate, start_time: newEventStartTime }
-      currentMonth['next_events'].push(eventAttrs)
+      if currentMonth['next_events'].length < 5
+        eventAttrs = { summary: nextEvent.summary, start_date: newEventStartDate, start_time: newEventStartTime }
+        currentMonth['next_events'].push(eventAttrs)
 
     @set('months', months.slice(0, 2))
 
