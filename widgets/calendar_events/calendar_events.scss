@@ -1,15 +1,10 @@
 $font-size: 46pt;
+
 $blue: #67C1DC;
 $green: #8CBD3E;
 $yellow: #F7CC2b;
 $red: #B9281E;
 $gray: #4A4A4A;
-
-body {
-  background-color: $blue !important;
-  font-family: 'Coming Soon', 'Open Sans' !important;
-  text-transform: uppercase;
-}
 
 .widget.widget-calendar-events {
   vertical-align: initial;
