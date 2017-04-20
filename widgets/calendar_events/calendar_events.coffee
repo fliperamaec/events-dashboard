@@ -55,6 +55,7 @@ class Dashing.CalendarEvents extends Dashing.Widget
     duration = moment.duration(initialCountdown)
     interval = 1000
     $timer = $('.js-countdown-timer')
+    $mainEventArea = $('.js-main-event')
 
     intervalId = setInterval ->
       if duration < interval
@@ -65,5 +66,7 @@ class Dashing.CalendarEvents extends Dashing.Widget
         data = duration._data
         hours = data['hours'] + 24 * data['days']
         minutesAndSeconds = moment(data).format('mm:ss')
+
         $timer.text("#{hours}:#{minutesAndSeconds}")
+        $mainEventArea.toggleClass('today', hours < 24)
     , interval
