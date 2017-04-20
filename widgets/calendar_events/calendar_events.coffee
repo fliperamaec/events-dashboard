@@ -62,6 +62,8 @@ class Dashing.CalendarEvents extends Dashing.Widget
         clearInterval(intervalId)
       else
         duration = moment.duration(duration - interval, 'milliseconds')
-        countdown = moment(duration._data).format('HH:mm:ss')
-        $timer.text(countdown)
+        data = duration._data
+        hours = data['hours'] + 24 * data['days']
+        minutesAndSeconds = moment(data).format('mm:ss')
+        $timer.text("#{hours}:#{minutesAndSeconds}")
     , interval
