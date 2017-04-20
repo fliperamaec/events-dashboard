@@ -1,9 +1,13 @@
 $font-size: 46pt;
-$row-background-color-1: #98D0C3;
-$row-background-color-2: #00B98E;
+$blue: #67C1DC;
+$green: #8CBD3E;
+$yellow: #F7CC2b;
+$red: #B9281E;
+$gray: #4A4A4A;
 
 body {
-  background-color: $row-background-color-1 !important;
+  background-color: $blue !important;
+  font-family: 'Coming Soon', 'Open Sans' !important;
   text-transform: uppercase;
 }
 
@@ -12,11 +16,17 @@ body {
 }
 
 .main-event {
-  background-color: #5080BB;
-  height: 150px;
+  background-color: $yellow;
+  color: $gray;
   font-size: $font-size;
+  height: 135px;
   line-height: $font-size;
   padding-top: 22px;
+
+  &.today {
+    background-color: $red;
+    color: white;
+  }
 
   & > div {
     display: inline-block;
@@ -48,25 +58,25 @@ body {
   width: 930px;
 
   &:first-child .event:nth-child(even) {
-    background-color: $row-background-color-2;
+    background-color: $green;
   }
 
   &:last-child .event:nth-child(odd) {
-    background-color: $row-background-color-2;
+    background-color: $green;
   }
 }
 
 .events__month-name {
-  background-color: #98D0C3;
-  color: #4A4A4A;
+  background-color: $blue;
+  color: $gray;
   font-size: $font-size;
   line-height: $font-size + 20px;
   padding: 10px;
 }
 
 .event {
-  color: #4A4A4A;
-  height: 110px;
+  color: $gray;
+  height: 105px;
   padding-top: 18px;
 }
 
