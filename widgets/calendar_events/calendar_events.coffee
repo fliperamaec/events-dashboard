@@ -15,6 +15,12 @@ class Dashing.CalendarEvents extends Dashing.Widget
     'Dezembro'
   ]
 
+  ready: ->
+    setInterval ->
+      $('.js-calendar-events').toggle()
+      $('.js-hashtag').toggle()
+    , 30000
+
   onData: (data) =>
     if intervalId?
       clearInterval(intervalId)
@@ -46,8 +52,12 @@ class Dashing.CalendarEvents extends Dashing.Widget
         months.push(currentMonth)
 
       if currentMonth['next_events'].length < 5
-        eventAttrs = { summary: nextEvent.summary, start_date: newEventStartDate, start_time: newEventStartTime }
-        currentMonth['next_events'].push(eventAttrs)
+        currentMonth['next_events'].push({
+          description: nextEvent.description,
+          summary: nextEvent.summary,
+          start_date: newEventStartDate,
+          start_time: newEventStartTime
+        })
 
     @set('months', months.slice(0, 2))
 

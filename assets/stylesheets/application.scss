@@ -5,7 +5,6 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color: #67C1DC;
 $text-color: #fff;
 
 $background-warning-color-1: #e82711;
@@ -43,10 +42,11 @@ html {
 
 body {
   margin: 0;
-  background-color: $background-color !important;
   font-size: 20px;
+  font-weight: 600;
   color: $text-color;
-  font-family: 'Coming Soon', 'Open Sans' !important;
+  font-family: 'Dosis', 'Open Sans' !important;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 

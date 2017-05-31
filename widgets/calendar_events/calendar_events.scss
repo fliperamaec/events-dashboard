@@ -1,10 +1,26 @@
-$font-size: 46pt;
+$font-size: 44pt;
 
-$blue: #67C1DC;
+$blue: #78DEFD;
 $green: #8CBD3E;
 $yellow: #F7CC2b;
-$red: #B9281E;
+$yellow: #FFDB55;
+$red: #D85148;
 $gray: #4A4A4A;
+
+body {
+  background-color: $blue !important;
+}
+
+hr {
+  background-image: -webkit-linear-gradient(left, $blue, $gray, $blue);
+  background-image:    -moz-linear-gradient(left, $blue, $gray, $blue);
+  background-image:     -ms-linear-gradient(left, $blue, $gray, $blue);
+  background-image:      -o-linear-gradient(left, $blue, $gray, $blue);
+  border: 0;
+  height: 1px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
 
 .widget.widget-calendar-events {
   vertical-align: initial;
@@ -16,7 +32,7 @@ $gray: #4A4A4A;
   font-size: $font-size;
   height: 135px;
   line-height: $font-size;
-  padding-top: 22px;
+  padding-top: 16px;
 
   &.today {
     background-color: $red;
@@ -38,10 +54,11 @@ $gray: #4A4A4A;
 .main-event__summary {
   padding-left: 50px;
   text-align: left;
-  width: 1200px;
+  width: 1150px;
 }
 
 .main-event__countdown {
+  font-size: 2 * $font-size;
   line-height: 2 * $font-size;
   text-align: center;
   width: 390px;
@@ -51,21 +68,12 @@ $gray: #4A4A4A;
   display: inline-block;
   float: left;
   width: 930px;
-
-  &:first-child .event:nth-child(even) {
-    background-color: $green;
-  }
-
-  &:last-child .event:nth-child(odd) {
-    background-color: $green;
-  }
 }
 
 .events__month-name {
-  background-color: $blue;
   color: $gray;
-  font-size: $font-size;
-  line-height: $font-size + 20px;
+  font-size: 1.5 * $font-size;
+  line-height: 2 * $font-size;
   padding: 20px 0 10px;
 }
 
@@ -92,4 +100,5 @@ $gray: #4A4A4A;
   max-width: 750px;
   padding-left: 30px;
   text-align: left;
+  width: 100%;
 }
