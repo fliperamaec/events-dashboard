@@ -22,8 +22,8 @@ class Dashing.CalendarEvents extends Dashing.Widget
     , 30000
 
   onData: (data) =>
-    if intervalId?
-      clearInterval(intervalId)
+    if @intervalId?
+      clearInterval(@intervalId)
 
     event = rest = null
     getEvents = (first, others...) ->
@@ -67,10 +67,10 @@ class Dashing.CalendarEvents extends Dashing.Widget
     $timer = $('.js-countdown-timer')
     $mainEventArea = $('.js-main-event')
 
-    intervalId = setInterval ->
+    @intervalId = setInterval ->
       if duration < interval
         $timer.text('UHUU! :D')
-        clearInterval(intervalId)
+        clearInterval(@intervalId)
       else
         duration = moment.duration(duration - interval, 'milliseconds')
         data = duration._data
