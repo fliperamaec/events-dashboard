@@ -69,7 +69,7 @@ class Dashing.CalendarEvents extends Dashing.Widget
 
     @intervalId = setInterval ->
       if duration < interval
-        $timer.text('UHUU! :D')
+        $timer.text('UHUL! :D')
         clearInterval(@intervalId)
       else
         duration = moment.duration(duration - interval, 'milliseconds')

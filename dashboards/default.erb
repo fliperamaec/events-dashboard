@@ -1,18 +1,4 @@
-<script type='text/javascript'>
-$(function() {
-   Dashing.widget_margins = [0, 0];
-   Dashing.widget_base_dimensions = [465, 200];
-   Dashing.numColumns = 4;
-});
-</script>
-
 <% content_for :title do %>Fliperama Dashboard<% end %>
 
-<div class="gridster">
-  <ul>
-    <li data-row="1" data-col="1" data-sizex="4" data-sizey="4">
-      <div data-id="calendar_events" class="js-calendar-events" data-view="CalendarEvents"></div>
-      <img src="https://raw.githubusercontent.com/fliperamaec/events-dashboard/master/assets/images/dashboard.jpg?raw=true" class="js-hashtag" style="display:none">
-    </li>
-  </ul>
-</div>
+<div data-id="calendar_events" class="js-calendar-events" data-view="CalendarEvents"></div>
+<img src="https://raw.githubusercontent.com/fliperamaec/events-dashboard/master/assets/images/dashboard.jpg?raw=true" class="js-hashtag" style="display:none">
